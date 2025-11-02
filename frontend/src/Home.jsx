@@ -41,7 +41,7 @@ const Home = () => {
   const fetchJobs = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/job-posts`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}/job-posts`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
@@ -59,7 +59,7 @@ const Home = () => {
 
   const fetchAppliedJobs = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/job-applications/college`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}/job-applications/college`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
@@ -75,7 +75,7 @@ const Home = () => {
 
   const fetchMyJobPosts = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/job-posts/company`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}/job-posts/company`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
@@ -110,7 +110,7 @@ const Home = () => {
   const handleJobFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/job-posts`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}/job-posts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -152,7 +152,7 @@ const Home = () => {
 
   const handleApplyForJob = async (jobId) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/job-applications/${jobId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}/job-applications/${jobId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -294,6 +294,7 @@ const Home = () => {
                         name="requiredSkills"
                         value={jobFormData.requiredSkills}
                         onChange={handleJobFormChange}
+                        placeholder="Skills required.."
                       />
                     </div>
                     <div className="form-group">

@@ -243,6 +243,8 @@ main {
 }
 
 .job-form-container h3 {
+    visibility: visible;
+    display: block;
     margin-bottom: 15px;
     color: #333;
 }
