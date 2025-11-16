@@ -16,3 +16,4 @@ router.delete('/:id', auth, collegeController.deleteCollege);
 
 module.exports = router;
 
+

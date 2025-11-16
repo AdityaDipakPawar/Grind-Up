@@ -251,3 +251,4 @@ jobPostsSchema.virtual('salaryRange').get(function() {
 
 module.exports = mongoose.model('JobPosts', jobPostsSchema);
 
+

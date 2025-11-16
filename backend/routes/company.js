@@ -16,3 +16,4 @@ router.delete('/:id', auth, companyController.deleteCompany);
 
 module.exports = router;
 
+

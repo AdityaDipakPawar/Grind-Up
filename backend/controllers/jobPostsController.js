@@ -409,3 +409,4 @@ exports.searchJobPosts = async (req, res) => {
   }
 };
 
+
